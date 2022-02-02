@@ -1,14 +1,14 @@
 $foreground: #222222;
-$background: #eeeeee;
+$background: #ffffff;
 $secondary: gray;
-$tertiary: #dddddd;
-$accent: #5353ff;
+$tertiary: #f6f8fa;
+$accent: #00bf60;
 
 $foreground-dark: #eeeeee;
-$background-dark: #161616;
+$background-dark: #1a1a1a;
 $secondary-dark: #999999;
-$tertiary-dark: #444444;
-$accent-dark: $accent;
+$tertiary-dark: #333333;
+$accent-dark: #0bff85;
 
 @mixin light-theme {
     color: $foreground;
@@ -23,7 +23,7 @@ $accent-dark: $accent;
     }
 
     a:hover {
-        color: darken($accent, 30%);
+        color: darken($accent, 5%);
     }
 
     blockquote {
