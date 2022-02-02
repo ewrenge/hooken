@@ -53,10 +53,12 @@ $accent-dark: #0bff85;
 
     a, a:link, a:visited {
         color: $accent-dark;
+        text-decoration:none;
     }
 
     a:hover {
         color: lighten($accent-dark, 10%);
+        text-decoration:underline;
     }
 
     blockquote {
