@@ -5,10 +5,10 @@ $tertiary: #f6f8fa;
 $accent: #00bf60;
 
 $foreground-dark: #eeeeee;
-$background-dark: #1a1a1a;
-$secondary-dark: #999999;
-$tertiary-dark: #333333;
-$accent-dark: #0bff85;
+$background-dark: #282d37;
+$secondary-dark: #898e99;
+$tertiary-dark: #373e4c;
+$accent-dark: #5ff59b;
 
 @mixin light-theme {
     color: $foreground;
