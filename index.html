@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hook</title>
+    
+    <link rel="stylesheet" href="https:&#x2F;&#x2F;ewreurei.github.io&#x2F;hooken&#x2F;style.css?h=c9ec655a657a7ea7404168c7429478e6f8721408dac3c73e440298be99681f50">
+    
+</head>
+<body>
+    
+    <header class="space">
+        <h1>Hook</h1>
+        
+        
+        <nav class="header-links">
+            
+            <a href="mailto:example@example.com">Mail</a>
+            
+            <a href="https:&#x2F;&#x2F;github.com">GitHub</a>
+            
+            <a href="https:&#x2F;&#x2F;linkedin.com">LinkedIn</a>
+            
+            
+            <a href="https:&#x2F;&#x2F;ewreurei.github.io&#x2F;hooken&#x2F;about&#x2F;">About</a>
+            
+        </nav>
+        
+    </header>
+    
+    
+    
+    
+    <main>
+        
+        <div class="space">
+            <p>Hi! Welcome to Hook! Hook is a Zola theme.</p>
+
+        </div>
+        
+        
+        <h2>Recent posts</h2>
+        <ul>
+            
+            <li><a href="https:&#x2F;&#x2F;ewreurei.github.io&#x2F;hooken&#x2F;blog&#x2F;markdown&#x2F;">Markdown example</a></li>
+            
+            <li><a href="https:&#x2F;&#x2F;ewreurei.github.io&#x2F;hooken&#x2F;blog&#x2F;hello-world&#x2F;">Hello world</a></li>
+            
+        </ul>
+        <p><a href="https:&#x2F;&#x2F;ewreurei.github.io&#x2F;hooken&#x2F;blog&#x2F;">Archive</a></p>
+        
+    </main>
+    
+    
+    <div class="dark-mode-buttons">
+        <button class="dark-mode-button" id="dark-mode-on"><img src="https:&#x2F;&#x2F;ewreurei.github.io&#x2F;hooken&#x2F;dark_mode.svg" width="24" height="24" alt=""></button>
+        <button class="dark-mode-button" id="dark-mode-off"><img src="https:&#x2F;&#x2F;ewreurei.github.io&#x2F;hooken&#x2F;light_mode.svg" width="24" height="24" alt=""></button>
+    </div>
+    <script>
+        const cls = document.body.classList;
+        const getSessionTheme = sessionStorage.getItem("theme");
+        if (getSessionTheme === "dark") {
+            cls.toggle("dark-mode", true);
+        } else if (getSessionTheme === "light") {
+            cls.toggle("dark-mode", false);
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            cls.toggle("dark-mode", true);
+        }
+
+        document.getElementById("dark-mode-on").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", true);
+            sessionStorage.setItem("theme", "dark");
+        });
+        document.getElementById("dark-mode-off").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", false);
+            sessionStorage.setItem("theme", "light");
+        });
+    </script>
+    <noscript>
+        <style>
+            .dark-mode-buttons {
+                display: none;
+            }
+        </style>
+    </noscript>
+</body>
+</html>
